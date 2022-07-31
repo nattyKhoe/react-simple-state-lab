@@ -7,14 +7,10 @@ class Cell extends React.Component {
             color: this.props.value
         }
     }
-    
-    changeColour = function (e){
-        e.currentTarget.style.backgroundColor = '#333';
-    }
 
     render (){
         return (
-            <div className="cell" style={{backgroundColor:`${this.state.color}`}} onClick={this.changeColour}></div>
+            <div className="cell" style={{backgroundColor:`${this.state.color}`}} onClick={ () => this.setState({color:"#333"})}></div>
         )
     }
 
